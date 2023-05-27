@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class OrderRepository {
     private static HashMap<String , Order> orderMap = new HashMap<>();
     private static HashMap<String , DeliveryPartner> partnerMap = new HashMap<>();
