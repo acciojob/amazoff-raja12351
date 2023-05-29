@@ -72,4 +72,8 @@ public class OrderRepository {
     public static String getPartnerForOrderid(String orderId) {
         return orderPartnerMap.get(orderId);
     }
+
+//    public static List<String> getAllPartners() {
+//        return new ArrayList<>(partnerMap.keySet());
+//    }
 }

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("orders")
+@RequestMapping("/orders")
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderController {
@@ -89,8 +89,15 @@ public class OrderController {
     public ResponseEntity<List<String>> getAllOrders(){
         List<String> orders = OrderService.getAllOrders();
         //Get all orders
-        return new ResponseEntity<>(orders, HttpStatus.CREATED);
+        return new ResponseEntity<>(orders, HttpStatus.ACCEPTED);
     }
+
+//    @GetMapping("/get-all-partners")
+//    public ResponseEntity<List<String>> getAllPartners(){
+//        List<String> partners = OrderService.getAllPartners();
+//
+//        return new ResponseEntity<>(partners,HttpStatus.ACCEPTED);
+//    }
 
     @GetMapping("/get-count-of-unassigned-orders")
     public ResponseEntity<Integer> getCountOfUnassignedOrders(){

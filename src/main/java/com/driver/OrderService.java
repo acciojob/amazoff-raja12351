@@ -78,6 +78,11 @@ public class OrderService {
         DeliveryPartner partner = new DeliveryPartner(partnerId);
         OrderRepository.addPartner(partner);
     }
+
+//    public static List<String> getAllPartners() {
+//        return OrderRepository.getAllPartners();
+//    }
+
     public Order getOrderById(String orderId) throws RuntimeException{
         Optional<Order> orderOptional = OrderRepository.getOrderById(orderId);
         if(orderOptional.isPresent()){
